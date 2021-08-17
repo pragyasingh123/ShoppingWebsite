@@ -1,0 +1,25 @@
+<div class="navigation-component">
+    <div class="row-section">
+        <!-- <ul>
+            <li>{{home}}</li>
+            <li>{{contact}}</li>
+            <li>{{career}}</li>
+            <li>{{Information}}</li>
+            </ul> -->
+            <ul> 
+                <li *ngFor ="let nav of NavObject">
+                   <a href="{{nav.url}}"> {{nav.itemName}}</a>
+                </li>
+                
+                </ul>
+         <!-- <button (click)="ShowFormComponent($event)"> Show this form</button>
+         <button (click)="ShowFormComponent2($event)"> Show this form 2</button>
+         <button (click)="ShowFormComponent($event)"> Show this form 3</button>
+
+               
+         <div class="show-component" *ngIf="showForms">
+            <app-forms></app-forms>
+             </div>       -->
+        
+        </div>
+    </div>

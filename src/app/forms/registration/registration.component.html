@@ -1,0 +1,55 @@
+
+
+<form  [formGroup]="formReset"  (ngSubmit)="formSubmit()"  *ngIf="!afterSubmission">
+  <div class="container">
+
+    <h1>{{registerText | uppercase}}</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="email" id="email"  formControlName="userFirstName">
+   
+      <label for="name"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="email" id="email"  formControlName="userLastName">
+    
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email"  formControlName="userEmail">
+    
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" formControlName="userPassword">
+
+    <div *ngIf="formReset.get('userPassword')?.hasError('required') && isSubmit">
+      <span class="validation-err">This field is required</span>
+      </div>
+
+      
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" formControlName="userRepeatPassword">
+    
+   
+      <label for="country"><b>Coutry</b></label>
+      <input type="text" placeholder="Enter Country" name="email" id="email"  formControlName="userCountry">
+
+      <label for="city"><b>City</b></label>
+      <input type="text" placeholder="Enter city" name="email" id="email"  formControlName="userCity">
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+
+<div class="after-register-component" *ngIf ="afterSubmission">
+  <div class="form-section">
+    <h2>You have successfully registered now</h2>
+</div>
+  </div>
