@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './forms/registration/registration.component';
 import { LoginComponent } from './forms/login/login.component';
 import { FourNotFourComponent } from './Component/four-not-four/four-not-four.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+
 const routes: Routes = [
   {path:'user/registration' , component:RegistrationComponent,
   data:{title:'Registration'}
@@ -15,7 +17,9 @@ const routes: Routes = [
    data:{
      title:'MainWebsite'
    }},
-  {path:'**',component:FourNotFourComponent}
+   {path:'parent',component:ParentComponentComponent},
+  {path:'**',component:FourNotFourComponent},
+  
 ];
 
 @NgModule({

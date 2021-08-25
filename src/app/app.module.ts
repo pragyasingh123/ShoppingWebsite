@@ -13,6 +13,8 @@ import { FourNotFourComponent } from './Component/four-not-four/four-not-four.co
 
 import {httpInterceptorProviders} from './utility/http-interceptors/interceptors-provider';
 import { CustomPipePipe } from './utility/pipes/custom-pipe.pipe';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { ChildComponentComponent } from './parent-component/child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CustomPipePipe } from './utility/pipes/custom-pipe.pipe';
     RegistrationComponent,
     LoginComponent,
     FourNotFourComponent,
-    CustomPipePipe
+    CustomPipePipe,
+    ParentComponentComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,
