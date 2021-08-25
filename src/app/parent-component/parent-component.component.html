@@ -2,7 +2,12 @@
 <h1>Parent Component</h1>
 <input type= text  [(ngModel)]="twoWayobj"><br/>
 {{twoWayobj}}
+
+<br/>
+<p> {{childObj}}</p>
 </div>
 
 
-<app-child-component account-id="4575" userName="ABC"  bankname="Prathima bank"></app-child-component>
+
+
+<app-child-component account-id="4575" userName="ABC"  bankname="Prathima bank" (myOutput) ="GetChildData($event)"></app-child-component>

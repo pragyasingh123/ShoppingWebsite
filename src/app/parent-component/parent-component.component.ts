@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponentComponent implements OnInit {
 
   twoWayobj:string;
+
+   childObj:string;
   constructor() { }
 
 
@@ -15,4 +17,8 @@ export class ParentComponentComponent implements OnInit {
    
   }
 
+
+  GetChildData(data:any){
+   this.childObj=data;
+  }
 }
