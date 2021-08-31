@@ -15,6 +15,7 @@ import {httpInterceptorProviders} from './utility/http-interceptors/interceptors
 import { CustomPipePipe } from './utility/pipes/custom-pipe.pipe';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { ChildComponentComponent } from './parent-component/child-component/child-component.component';
+import { ProductListingComponent } from './Components/product-listing/product-listing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ChildComponentComponent } from './parent-component/child-component/chil
     FourNotFourComponent,
     CustomPipePipe,
     ParentComponentComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    ProductListingComponent
   ],
   imports: [
     BrowserModule,

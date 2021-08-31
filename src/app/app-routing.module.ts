@@ -4,6 +4,7 @@ import { RegistrationComponent } from './forms/registration/registration.compone
 import { LoginComponent } from './forms/login/login.component';
 import { FourNotFourComponent } from './Component/four-not-four/four-not-four.component';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { ProductListingComponent } from './Components/product-listing/product-listing.component';
 
 const routes: Routes = [
   {path:'user/registration' , component:RegistrationComponent,
@@ -13,11 +14,11 @@ const routes: Routes = [
   data:{
   title:'Login'
   }},
-  {path:'',component:LoginComponent,
+  {path:'',component:ProductListingComponent,
    data:{
      title:'MainWebsite'
    }},
-   {path:'parent',component:ParentComponentComponent},
+  {path:'parent',component:ParentComponentComponent},
   {path:'**',component:FourNotFourComponent},
   
 ];

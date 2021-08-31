@@ -1,0 +1,14 @@
+<div class="product-list-container">
+    <div class="total-items">
+           Total-items:{{totalItems}}
+           </div>
+           <div class="products">
+               <div class="all-items" *ngFor="let item of productItems">
+                   <img src="{{item.image}}">
+                   <h3>{{item.title | uppercase}}</h3>
+                   <p>{{item.description}}</p>
+                   </div>
+               </div>
+
+        
+    </div>

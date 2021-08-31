@@ -12,4 +12,8 @@ export class CustomerServiceService {
    return this.httpClientService.HttpPostRequest(request,"http://localhost:60084/api/user/registration")
   }
 
+  productListing(){
+    return this.httpClientService.HttpGetRequest("https://fakestoreapi.com/products");
+  }
+
 }
