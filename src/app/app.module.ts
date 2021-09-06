@@ -16,6 +16,9 @@ import { CustomPipePipe } from './utility/pipes/custom-pipe.pipe';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { ChildComponentComponent } from './parent-component/child-component/child-component.component';
 import { ProductListingComponent } from './Components/product-listing/product-listing.component';
+import { NgxSpinnerModule, NgxSpinner } from 'ngx-spinner';
+import { HighlightDirective } from './highlight.directive';
+import { HighlightClassDirective } from './custom-directive/highlight-class.directive';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,17 @@ import { ProductListingComponent } from './Components/product-listing/product-li
     CustomPipePipe,
     ParentComponentComponent,
     ChildComponentComponent,
-    ProductListingComponent
+    ProductListingComponent,
+    HighlightDirective,
+    HighlightClassDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [Title,httpInterceptorProviders],
   bootstrap: [AppComponent]

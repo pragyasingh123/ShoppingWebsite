@@ -1,14 +1,35 @@
-<div class="product-list-container">
-    <div class="total-items">
-           Total-items:{{totalItems}}
-           </div>
-           <div class="products">
-               <div class="all-items" *ngFor="let item of productItems">
-                   <img src="{{item.image}}">
-                   <h3>{{item.title | uppercase}}</h3>
-                   <p>{{item.description}}</p>
-                   </div>
-               </div>
 
+
+
+
+    <div class="product-item-container">
+        <div class="total-items" [appHighlightClass]="'true'">
+            Total-items:{{totalItems}}
+            </div>
+
+            <div class="filter-section">
+                <h2>Filter</h2>
+                <div class="section-part">
+                <input type="checkbox" name="Electronics" value="electronics" class="checkbox-custo" (click)="getFiltereData('electronics')">
+                <span>Electronics</span>
+                </div>
+                <div class="section-part">
+                    <input type="checkbox" name="Jewellery" value="jewellery" class="checkbox-custo" (click)="getFiltereData('Electronics')">
+                <span>Jewellery</span>
+                </div>
+                <div class="section-part"> <input type="checkbox" name="clothing" value="clothing" class="checkbox-custo" (click)="getFiltereData('Electronics')">
+                    <span>clothing</span></div>
+               
+                </div>
+            
+      
+            <div class="products">
+                <div class="col-lg-3 all-items" *ngFor="let item of productItems">
+                    <img src="{{item.image}}">
+                    <h3>{{item.title | uppercase}} </h3>
+                    <p>{{item.description}}</p>
+                    </div>
+                </div>
+        </div>
+    
         
-    </div>

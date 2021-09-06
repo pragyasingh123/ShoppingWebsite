@@ -1,15 +1,42 @@
 .product-list-container{
     height: 400px;
-}
-
-.all-items img{
-height: 200px;
-width: 200px;
+    
 }
 
 .all-items{
     color:black;
     font-size: 20px;
     border-bottom: 2px solid black;
+    margin-top: 10px;
+}
+
+.all-items img{
+    height: 300px;
+    width: 339px;
+}
+.all-items {
+    height: 600px;
+    width: 370px;
+    margin: 62px;
+    background: beige;
+}
+.all-items:hover{
+    transform: scale(1);
+}
+
+
+.product-item-container{
+    width: 80%;
+    margin: 62px;
+}
+
+
+.all-items p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-part{
     margin-top: 10px;
 }
